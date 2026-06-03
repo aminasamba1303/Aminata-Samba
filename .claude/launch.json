@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "7845", "--directory", "/Users/Amina/Documents/GitHub/Aminata-Samba"],
+      "port": 7845
+    }
+  ]
+}
