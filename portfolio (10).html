@@ -33,6 +33,16 @@
 html{scroll-behavior:smooth}
 body{font-family:'Barlow Condensed','Helvetica Neue',Arial,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;cursor:none}
 
+
+/* ── PRACTICE REVEAL ── */
+.prac-reveal{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.4,0,.2,1);line-height:0}
+.prac-reveal.open{max-height:640px;line-height:1}
+.prac-reveal img{width:100%;display:block;object-fit:cover;max-height:600px;transition:opacity .4s ease}
+.p-tags{list-style:none;margin-top:16px;padding:0;display:flex;flex-direction:column;gap:5px}
+.p-tags li{font-family:var(--mono);font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-light);transition:color .3s}
+.p-tags li::before{content:'— ';opacity:.4}
+.p-card:hover .p-tags li{color:rgba(238,234,226,.45)}
+
 /* ── CURSOR ── */
 .cur{position:fixed;width:5px;height:5px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
 .cur-r{position:fixed;width:24px;height:24px;border:1px solid rgba(217,30,30,.28);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
@@ -474,44 +484,59 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
       <h2 class="sec-title">The <em>Practice</em></h2>
       <span class="sec-num">01</span>
     </div>
-    <div class="p-grid">
-      <div class="p-card fu" onclick="goTo('prac-cd')">
+    <div class="p-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="p-card fu" onclick="togglePractice('cd')" style="cursor:pointer;">
         <div class="p-num">001</div>
         <div class="p-name">Creative Direction</div>
         <p class="p-desc">Shaping the full vision from the first word to the final image.</p>
-        <span class="p-arr">→</span>
+        <ul class="p-tags">
+          <li>Concept Development</li>
+          <li>Visual World-Building</li>
+          <li>Moodboarding</li>
+          <li>Shoot Production</li>
+          <li>Creative Strategy</li>
+        </ul>
+        <span class="p-arr">+</span>
       </div>
-      <div class="p-card fu" onclick="goTo('prac-ad')">
+      <div class="p-card fu" onclick="togglePractice('ad')" style="cursor:pointer;">
         <div class="p-num">002</div>
-        <div class="p-name">Art Direction</div>
-        <p class="p-desc">Visual language as identity the frame, the palette, the feeling.</p>
-        <span class="p-arr">→</span>
+        <div class="p-name">Art Direction & Styling</div>
+        <p class="p-desc">Visual language as identity. The frame, the palette, the feeling.</p>
+        <ul class="p-tags">
+          <li>On-Set Direction</li>
+          <li>Garment Selection</li>
+          <li>Look Composition</li>
+          <li>Set Design</li>
+          <li>Talent Direction</li>
+        </ul>
+        <span class="p-arr">+</span>
       </div>
-      <div class="p-card fu" onclick="goTo('prac-mb')">
+      <div class="p-card fu" onclick="togglePractice('brand')" style="cursor:pointer;">
         <div class="p-num">003</div>
-        <div class="p-name">Moodboarding</div>
-        <p class="p-desc">A world compressed into a single emotional truth.</p>
-        <span class="p-arr">→</span>
-      </div>
-      <div class="p-card fu" onclick="goTo('prac-ed')">
-        <div class="p-num">004</div>
-        <div class="p-name">Editorial Shoots</div>
-        <p class="p-desc">On set, every decision is the story. I direct, I feel, I push.</p>
-        <span class="p-arr">→</span>
-      </div>
-      <div class="p-card fu" onclick="goTo('prac-st')">
-        <div class="p-num">005</div>
-        <div class="p-name">Styling & Composition</div>
-        <p class="p-desc">Garments, space, and light arranged with the instinct of someone who inhabits the image.</p>
-        <span class="p-arr">→</span>
-      </div>
-      <div class="p-card fu" onclick="goTo('prac-bs')">
-        <div class="p-num">006</div>
-        <div class="p-name">Brand Storytelling</div>
+        <div class="p-name">Brand & Editorial</div>
         <p class="p-desc">Luxury, fashion, culture told through imagery that doesn't explain itself.</p>
-        <span class="p-arr">→</span>
+        <ul class="p-tags">
+          <li>Brand Identity</li>
+          <li>Visual Storytelling</li>
+          <li>Content Direction</li>
+          <li>Digital Storytelling</li>
+          <li>Campaign Direction</li>
+        </ul>
+        <span class="p-arr">+</span>
       </div>
     </div>
+
+    <!-- PRACTICE IMAGE REVEALS -->
+    <div class="prac-reveal" id="prac-reveal-cd">
+      <img src="assets/chloe/hero-staircase.jpg" alt="Creative Direction" style="object-position:center 30%;">
+    </div>
+    <div class="prac-reveal" id="prac-reveal-ad">
+      <img src="assets/web/screens/screens-06.jpg" alt="Art Direction & Styling" style="object-position:center top;">
+    </div>
+    <div class="prac-reveal" id="prac-reveal-brand">
+      <img src="assets/web/donyale/IMG_1684.jpg" alt="Brand & Editorial" style="object-position:center top;">
+    </div>
+
   </section>
 
   <!-- SELECTED WORLDS -->
@@ -1462,6 +1487,25 @@ function goTo(id) {
     a.classList.toggle('active', a.dataset.page === id);
   });
 }
+
+// Practice reveal toggle
+let activePrac = null;
+function togglePractice(id) {
+  const ids = ['cd', 'ad', 'brand'];
+  ids.forEach(p => {
+    const el = document.getElementById('prac-reveal-' + p);
+    const card = document.querySelector('[onclick="togglePractice(\'' + p + '\')"]');
+    if (el) el.classList.remove('open');
+  });
+  if (activePrac !== id) {
+    const el = document.getElementById('prac-reveal-' + id);
+    if (el) el.classList.add('open');
+    activePrac = id;
+  } else {
+    activePrac = null;
+  }
+}
+
 // Init — ensure clean state on load
 // Ensure wrapper is off-screen immediately
 if (wrapper) {
