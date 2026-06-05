@@ -342,7 +342,7 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
 /* ── ABOUT PAGE LAYOUT ── */
 .ap{display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:start;padding:120px 52px 80px;min-height:100vh;}
 @media(max-width:860px){.ap{grid-template-columns:1fr;padding:100px 22px 60px;}}
-.ap-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 15%;position:absolute;top:0;left:0;display:block;}
+.ap-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 60%;position:absolute;top:0;left:0;display:block;}
 
 /* ── FADE UP ── */
 .fu{opacity:1;transform:none}
@@ -522,35 +522,35 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
     </div>
     <!-- ADD NEW PROJECTS HERE just duplicate a .proj-row block -->
     <div class="proj-list">
-      <div class="proj-row" onclick="goTo('screens')">
+      <div class="proj-row" onclick="goTo('chloe')">
         <span class="pr-num">001</span>
+        <div><div class="pr-title">La Couronne</div><div class="pr-sub">Portrait editorial — Bourse de Commerce, Paris</div></div>
+        <span class="pr-status">Executed</span>
+        <div class="pr-tag">2023<br>Portrait Éditorial</div>
+      </div>
+      <div class="proj-row" onclick="goTo('donyale')">
+        <span class="pr-num">002</span>
+        <div><div class="pr-title">Donyale Luna</div><div class="pr-sub">Tribute editorial — Donyale Luna, 1966</div></div>
+        <span class="pr-status">Executed</span>
+        <div class="pr-tag">2024<br>Creative Direction</div>
+      </div>
+      <div class="proj-row" onclick="goTo('screens')">
+        <span class="pr-num">003</span>
         <div><div class="pr-title">Screens</div><div class="pr-sub">Creative editorial — KOZZY Studio, Montréal</div></div>
         <span class="pr-status">Executed</span>
         <div class="pr-tag">2025<br>Creative Direction</div>
       </div>
       <div class="proj-row" onclick="goTo('artelier')">
-        <span class="pr-num">002</span>
+        <span class="pr-num">004</span>
         <div><div class="pr-title">Artelier Saint</div><div class="pr-sub">Brand editorial — Artelier Saint, Montréal</div></div>
         <span class="pr-status">Executed</span>
         <div class="pr-tag">2025<br>Brand Collab</div>
       </div>
       <div class="proj-row" onclick="goTo('jongoma')">
-        <span class="pr-num">003</span>
-        <div><div class="pr-title">Jongoma</div><div class="pr-sub">Fashion editorial — West African identity</div></div>
-        <span class="pr-status concept">Concept</span>
-        <div class="pr-tag">2025<br>Concept</div>
-      </div>
-      <div class="proj-row" onclick="goTo('donyale')">
-        <span class="pr-num">004</span>
-        <div><div class="pr-title">Donyale Luna</div><div class="pr-sub">Tribute editorial — Donyale Luna, 1966</div></div>
-        <span class="pr-status">Executed</span>
-        <div class="pr-tag">2024<br>Creative Direction</div>
-      </div>
-      <div class="proj-row" onclick="goTo('chloe')">
         <span class="pr-num">005</span>
-        <div><div class="pr-title">La Couronne</div><div class="pr-sub">Portrait editorial — Bourse de Commerce, Paris</div></div>
-        <span class="pr-status">Executed</span>
-        <div class="pr-tag">2023<br>Portrait Éditorial</div>
+        <div><div class="pr-title">Jongoma</div><div class="pr-sub">Fashion editorial — West African identity</div></div>
+        <span class="pr-status concept">In Production</span>
+        <div class="pr-tag">2025<br>In Production</div>
       </div>
     </div>
   </section>
@@ -1339,8 +1339,8 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
       <h1 class="ap-title">Aminata<br>Samba</h1>
       <p class="ap-sub">Creative Director &mdash; Art Director<br>Montréal · Paris · Dakar</p>
       <div class="ap-text">
-        <p>Based in Montréal, shaped by Paris and Dakar. Aminata works at the intersection of fashion, editorial and cultural identity — building visual worlds for brands that need imagery with weight and presence.</p>
-        <p style="margin-top:18px;">My background as an actress gave me something most creative directors don't have: I understand <em>presence</em> — the weight of how a body exists in light. That sensibility, emotional, physical, instinctive, is what I bring to every concept, every moodboard, every frame I direct.</p>
+        <p>Based in Montréal, shaped by Paris and Dakar. Aminata Samba is a Creative Director and Art Director working at the intersection of fashion, editorial and cultural identity — building visual worlds for projects that need imagery with weight and presence.</p>
+        <p style="margin-top:18px;">Her eye moves between registers: a crystal crown in the Pinault Collection, vintage televisions repurposed as fashion sets, a tribute to Donyale Luna's erased legacy, a West African identity reclaimed through high fashion. The common thread is an instinct for what a body communicates before a word is spoken — femininity not in exposure, but in charisma.</p>
         <p style="margin-top:18px;">I don't document. I direct. Every image I make is felt before it is understood.</p>
       </div>
       <div style="margin-top:52px;display:flex;gap:32px;padding-top:32px;border-top:1px solid var(--border);">
@@ -1370,11 +1370,11 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:36px;">
       <div>
         <p style="font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px;">Formation</p>
-        <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:var(--ink);line-height:1.9;">Cours Florent, Paris &mdash; 2021<br>DESS Marketing, ESG UQAM, Montréal<br>Professional Model, Folio Montréal 2018&ndash;2024</p>
+        <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:var(--ink);line-height:1.9;">B.Sc. Sciences de la Communication<br>Université de Montréal &mdash; 2018&ndash;2021</p>
       </div>
       <div>
         <p style="font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px;">Currently</p>
-        <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:var(--ink);line-height:1.9;">Actress, Filmcomm Talent &mdash; Ongoing<br>Creative Director &amp; Art Director<br>Based in Montréal, working globally</p>
+        <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;color:var(--ink);line-height:1.9;">Creative Director &amp; Art Director<br>Based in Montréal, working globally<br>Available for editorial, brand &amp; fashion projects</p>
       </div>
     </div>
   </section>
