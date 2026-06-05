@@ -485,7 +485,9 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
       <span class="sec-num">01</span>
     </div>
     <div class="p-grid" style="grid-template-columns:repeat(3,1fr);">
-      <div class="p-card fu" onclick="togglePractice('cd')" style="cursor:pointer;">
+
+      <!-- Creative Direction -->
+      <div class="p-card fu" onclick="togglePractice('cd')" style="cursor:pointer;overflow:hidden;display:flex;flex-direction:column;">
         <div class="p-num">001</div>
         <div class="p-name">Creative Direction</div>
         <p class="p-desc">Shaping the full vision from the first word to the final image.</p>
@@ -497,8 +499,13 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
           <li>Creative Strategy</li>
         </ul>
         <span class="p-arr">+</span>
+        <div class="prac-reveal" id="prac-reveal-cd" style="margin:24px -24px -34px -24px;">
+          <img src="assets/p25/twentyfine-13.jpg" alt="Creative Direction" style="width:100%;display:block;object-fit:cover;max-height:360px;object-position:center top;">
+        </div>
       </div>
-      <div class="p-card fu" onclick="togglePractice('ad')" style="cursor:pointer;">
+
+      <!-- Art Direction & Styling -->
+      <div class="p-card fu" onclick="togglePractice('ad')" style="cursor:pointer;overflow:hidden;display:flex;flex-direction:column;">
         <div class="p-num">002</div>
         <div class="p-name">Art Direction & Styling</div>
         <p class="p-desc">Visual language as identity. The frame, the palette, the feeling.</p>
@@ -510,8 +517,13 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
           <li>Talent Direction</li>
         </ul>
         <span class="p-arr">+</span>
+        <div class="prac-reveal" id="prac-reveal-ad" style="margin:24px -24px -34px -24px;">
+          <img src="assets/p25/IMG_5187.JPG" alt="Art Direction & Styling" style="width:100%;display:block;object-fit:cover;max-height:360px;object-position:center top;">
+        </div>
       </div>
-      <div class="p-card fu" onclick="togglePractice('brand')" style="cursor:pointer;">
+
+      <!-- Brand & Editorial -->
+      <div class="p-card fu" onclick="togglePractice('brand')" style="cursor:pointer;overflow:hidden;display:flex;flex-direction:column;">
         <div class="p-num">003</div>
         <div class="p-name">Brand & Editorial</div>
         <p class="p-desc">Luxury, fashion, culture told through imagery that doesn't explain itself.</p>
@@ -523,18 +535,11 @@ footer{border-top:1px solid rgba(238,234,226,.07);padding:22px 52px;display:flex
           <li>Campaign Direction</li>
         </ul>
         <span class="p-arr">+</span>
+        <div class="prac-reveal" id="prac-reveal-brand" style="margin:24px -24px -34px -24px;">
+          <img src="assets/p25/twentyfine-15.jpg" alt="Brand & Editorial" style="width:100%;display:block;object-fit:cover;max-height:360px;object-position:center top;">
+        </div>
       </div>
-    </div>
 
-    <!-- PRACTICE IMAGE REVEALS -->
-    <div class="prac-reveal" id="prac-reveal-cd">
-      <img src="assets/chloe/hero-staircase.jpg" alt="Creative Direction" style="object-position:center 30%;">
-    </div>
-    <div class="prac-reveal" id="prac-reveal-ad">
-      <img src="assets/web/screens/screens-06.jpg" alt="Art Direction & Styling" style="object-position:center top;">
-    </div>
-    <div class="prac-reveal" id="prac-reveal-brand">
-      <img src="assets/web/donyale/IMG_1684.jpg" alt="Brand & Editorial" style="object-position:center top;">
     </div>
 
   </section>
