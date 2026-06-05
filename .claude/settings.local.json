@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m 'checkpoint: avant travail Afternoon in Paris — session 2026-06-04 *)"
+    ]
+  }
+}
