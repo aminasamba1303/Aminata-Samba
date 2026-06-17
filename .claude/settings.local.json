@@ -49,7 +49,13 @@
       "Bash(git commit -m 'style: Artelier Saint — retrait Montréal du crédit client *)",
       "Bash(git commit -m 'style: Donyale Luna — crédits format magazine identique à Artelier Saint *)",
       "Bash(grep -n \"donyale\\\\|Donyale\\\\|DONYALE\" /Users/Amina/Downloads/\"portfolio \\(7\\).html\" | head -60)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Bash(sed -n '664,670p' \"/Users/Amina/Documents/GitHub/Aminata-Samba/portfolio \\(10\\).html\")",
+      "Bash(sed -n '911,916p' \"/Users/Amina/Documents/GitHub/Aminata-Samba/portfolio \\(10\\).html\")",
+      "Bash(sed -n '778,782p' \"/Users/Amina/Documents/GitHub/Aminata-Samba/portfolio \\(10\\).html\")",
+      "Bash(git rm *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
